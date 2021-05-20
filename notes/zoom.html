@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoom</title>
+  <link rel="stylesheet" href="../src/libs/Exzoom/src/jquery.exzoom.css">
+  <style>
+    body{
+      margin: 0;
+      left: 0;
+    }
+    #exzoom{
+      position: absolute;
+      top: 50%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+    }
+    .exzoom_nav{
+      background-color: lightblue;
+      height: 130px !important;
+      left: 0 !important;
+    }
+    .exzoom_nav_inner{
+      width: 100% !important;
+      display: flex;
+      height: 100% !important;
+    }
+    .exzoom_nav_inner span, .exzoom_nav_inner span img{
+      width: 130px !important;
+      height: 130px !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="exzoom" id="exzoom">
+    <div class="exzoom_img_box">
+      <ul class='exzoom_img_ul'>
+        <li>
+          <img src="../src/images/products/A41004_1.jpg"/>
+        </li>
+        <li>
+          <img src="../src/images/products/A41004_2.jpg"/>
+        </li>
+        <li>
+          <img src="../src/images/products/A41004_3.jpg"/>
+        </li>
+        <li>
+          <img src="../src/images/products/A41004_4.jpg"/>
+        </li>
+      </ul>
+    </div>
+    <div class="exzoom_nav"></div>
+  </div>
+  <script src="../src/libs/jquery/jquery-3.5.1.js"></script>
+  <script src="../src/libs/Exzoom/src/jquery.exzoom.js"></script>
+  <script>
+    $(function(){
+    $("#exzoom").exzoom({
+      "autoPlay":true
+    });
+    });
+  </script>
+</body>
+</html>
